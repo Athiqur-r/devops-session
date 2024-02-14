@@ -24,3 +24,10 @@ jobs:
     - run: echo "It's started Clonning"
     - run: echo "Cloned"
     - run: cp -r /var/www/actions-runner/_work/devops-session/devops-session/* /var/www/devops
+    - run: pm2 stop all
+    - run: pm2 delete all
+    - run: sudo rm -rf /root/.pm2/logs/*
+    - run: sudo rm -rf /var/www/html/devops.html
+    - run: cp -r /var/www/devops/devops.html /var/www/html
+    - run: pm2 start /var/www/ecosystem.config.js
+    - run: pm2 start http-server --name my-web-server -- -p 8080
