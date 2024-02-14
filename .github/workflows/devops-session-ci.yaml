@@ -30,4 +30,3 @@ jobs:
     - run: sudo rm -rf /var/www/html/devops.html
     - run: cp -r /var/www/devops/devops.html /var/www/html
     - run: pm2 start /var/www/ecosystem.config.js
-    - run: pm2 start http-server --name my-web-server -- -p 8080
