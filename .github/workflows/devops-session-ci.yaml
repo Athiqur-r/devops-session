@@ -23,3 +23,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: echo "It's started Clonning"
     - run: echo "Cloned"
+    - run: cp -r /var/www/actions-runner/_work/devops-session/devops-session/* /var/www/devops
