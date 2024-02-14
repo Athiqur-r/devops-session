@@ -27,6 +27,6 @@ jobs:
     - run: pm2 stop all
     - run: pm2 delete all
     - run: sudo rm -rf /root/.pm2/logs/*
-    - run: sudo rm -rf /var/www/html/devops.html
-    - run: cp -r /var/www/devops/devops.html /var/www/html
+    - run: sudo rm -rf /var/www/html/index.html
+    - run: cp -r /var/www/devops/index.html /var/www/html
     - run: pm2 start /var/www/ecosystem.config.js
